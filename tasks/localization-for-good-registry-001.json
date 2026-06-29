@@ -1,0 +1,34 @@
+{
+  "id": "localization-for-good-registry-001",
+  "title": "Project eligibility rubric + vetted-project registry",
+  "project": "localization-for-good",
+  "type": "data",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["localization", "i18n", "open-source", "licensing"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "localization-for-good translates the UI strings of high-impact nonprofit/civic open-source tools, but only where the upstream project welcomes contributions and we follow its license + CLA/DCO + contribution process. Nothing may be translated or submitted until the target project is vetted and recorded with its license, i18n format, contribution channel, CLA/DCO requirement, risk domain, pinned source commit, and maintainer-consent status. This registry is the consent-first, license-as-data foundation that every later gate checks against.",
+  "objective": "Create an objective eligibility rubric and a structured registry of vetted upstream projects, recording per project the fields needed by the contribution-compliance and license gates, so no unsolicited or non-compliant submission can occur.",
+  "acceptanceCriteria": [
+    "projects/registry.yaml lists at least 5 vetted projects, each scored against the 4-criterion eligibility rubric (open license; public-good mission not for-profit-primary; real language-blocked users; accepts translation contributions)",
+    "Each entry records name, repo, url, mission, sector, license, i18nFormat, contributionChannel, claType and claUrl, styleGuideUrl, glossaryUrl, riskDomain, sourceCommit and sourceCatalogHash, maintainerConsent and consentEvidenceUrl, verifiedBy, verifiedDate",
+    "Repos with no license or whose primary beneficiary is a for-profit are excluded with a recorded excludedReason",
+    "Any project whose strings carry medical, legal, or safety content is flagged riskDomain != none and marked high risk tier",
+    "The file validates against registrySchema and passes the CI structural check"
+  ],
+  "resources": [
+    "C:/code/elyos/planning/projects/localization-for-good/PLAN.md",
+    "C:/code/elyos/docs/good-deed-definition.md",
+    "C:/code/elyos/packages/schema/src/schemas.ts",
+    "Unicode CLDR plural rules reference",
+    "Developer Certificate of Origin (DCO) 1.1"
+  ],
+  "output": "projects/registry.yaml plus a short README documenting the eligibility rubric and verification process",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}
